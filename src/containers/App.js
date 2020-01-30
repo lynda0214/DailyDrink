@@ -10,9 +10,9 @@ import EditOrderPage from './EditOrderPage/EditOrderPage';
 const App = () => (
   <Router>
     <Toolbar />
-    <Route path='/DailyDrink/' exact component={OrderListPage}/>
-    <Route path='/DailyDrink/order' component={CreateOrderPage}/>
-    <Route path='/DailyDrink/edit/:id' component={EditOrderPage}/>
+    <Route path={`${process.env.PUBLIC_URL}/`} exact component={OrderListPage}/>
+    <Route path={`${process.env.PUBLIC_URL}/order`} component={CreateOrderPage}/>
+    <Route path={`${process.env.PUBLIC_URL}/edit/:id`} component={EditOrderPage}/>
   </Router>
 );
 

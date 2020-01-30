@@ -39,7 +39,7 @@ class CreateOrderPage extends Component {
                         type='text'
                         ref='newAddition'
                         placeholder='請輸入附註(ex.甜度冰塊)'/>
-                    <Link to='/DailyDrink/'>
+                    <Link to={`${process.env.PUBLIC_URL}/`}>
                         <input
                             type='submit'
                             className={styles.SubmitBtn}

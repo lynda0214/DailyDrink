@@ -6,7 +6,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import styles from './OrderButton.module.css';
 
 const orderButton = () => (
-  <Link to='/DailyDrink/order' className={styles.OrderButton}>
+  <Link to={`${process.env.PUBLIC_URL}/order`} className={styles.OrderButton}>
     <FontAwesomeIcon icon={faPlus} />
   </Link>
 );
