@@ -1,0 +1,23 @@
+.Toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3.5rem;
+  background-color: #2ECC71;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Logo {
+  font-family: 'Fredoka One', cursive;
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+.Logo:hover {
+  color: rgba(255, 255, 255, 1);
+}

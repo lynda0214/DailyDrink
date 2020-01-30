@@ -1,0 +1,32 @@
+.EditOrderPage {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.EditOrder {
+  width: 60%;
+  max-width: 300px;
+  text-align: center;
+  border: 3px solid #2ECC71;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.EditOrder h3 {
+  color: #2ECC71;
+}
+
+.EditOrder input {
+  width: 80%;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid #2ECC71;
+}
+
+.EditOrder .SubmitBtn {
+  background-color: #2ECC71;
+  color: white;
+  margin-bottom: 1rem;
+}

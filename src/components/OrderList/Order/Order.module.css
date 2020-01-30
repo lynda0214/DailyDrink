@@ -1,0 +1,9 @@
+.IconButton {
+  cursor: pointer;
+  color: rgba(46, 204, 113, 1);
+  margin: 1rem;
+}
+
+.IconButton:hover {
+  color: rgba(46, 204, 113, 0.5);
+}

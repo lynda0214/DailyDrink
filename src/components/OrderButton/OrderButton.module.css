@@ -1,0 +1,12 @@
+.OrderButton {
+  margin: 1rem;
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.OrderButton:hover {
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.8rem;
+  text-decoration: none;
+}
