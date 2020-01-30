@@ -35,8 +35,7 @@ class CreateOrderPage extends Component {
                         ref='newPrice'
                         placeholder='請輸入飲料價格'
                         required />
-                    <input
-                        type='text'
+                    <textarea
                         ref='newAddition'
                         placeholder='請輸入附註(ex.甜度冰塊)'/>
                     <Link to={`${process.env.PUBLIC_URL}/`}>

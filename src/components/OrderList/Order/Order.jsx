@@ -15,7 +15,7 @@ const order = (props) => {
         <tr>
             <td>{props.title}</td>
             <td>{props.price}</td>
-            <td>{props.addition}</td>
+            <td><pre>{props.addition}</pre></td>
             <td style={{textAlign: "right"}}>
                 <Link to={editLink}>
                     <FontAwesomeIcon icon={faPen} className={styles.IconButton}/>

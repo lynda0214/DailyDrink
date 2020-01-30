@@ -43,8 +43,7 @@ class EditOrderPage extends Component {
                     ref='newPrice'
                     defaultValue={this.oldPrice}
                     placeholder='請輸入飲料價格'/>
-                <input
-                    type='text'
+                <textarea
                     ref='newAddition'
                     defaultValue={this.oldAddition}
                     placeholder='請輸入附註(ex.甜度冰塊)'/>
