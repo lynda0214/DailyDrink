@@ -8,7 +8,7 @@ import styles from './Order.module.css';
 
 const order = (props) => {
 
-    let editLink = process.env.PUBLIC_URL + '/edit';
+    let editLink = process.env.PUBLIC_URL + '/edit/';
     editLink = editLink + props.index;
 
     return (
