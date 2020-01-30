@@ -8,7 +8,7 @@ import styles from './Order.module.css';
 
 const order = (props) => {
 
-    let editLink = '/edit/';
+    let editLink = '/DailyDrink/edit/';
     editLink = editLink + props.index;
 
     return (
