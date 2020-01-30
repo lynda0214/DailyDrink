@@ -6,7 +6,7 @@ import OrderButton from '../../components/OrderButton/OrderButton';
 
 const toolbar = () => (
   <header className={styles.Toolbar}>
-    <Link to="/" className={styles.Logo}>
+    <Link to="/DailyDrink/" className={styles.Logo}>
       DailyDrinks
     </Link>
     <OrderButton />

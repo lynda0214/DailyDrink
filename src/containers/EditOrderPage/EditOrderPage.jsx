@@ -49,7 +49,7 @@ class EditOrderPage extends Component {
                     defaultValue={this.oldAddition}
                     placeholder='請輸入附註(ex.甜度冰塊)'/>
 
-                <Link to='/'>
+                <Link to='/DailyDrink/'>
                     <input
                         type='submit'
                         className={styles.SubmitBtn}
