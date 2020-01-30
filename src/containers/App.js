@@ -8,7 +8,7 @@ import CreateOrderPage from './CreateOrderPage/CreateOrderPage';
 import EditOrderPage from './EditOrderPage/EditOrderPage';
 
 const App = () => (
-  <Router basename={ process.env.PUBLIC_URL }>
+  <Router>
     <Toolbar />
     <Route path='/' exact component={OrderListPage}/>
     <Route path='/order' component={CreateOrderPage}/>
