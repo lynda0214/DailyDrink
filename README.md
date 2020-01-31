@@ -1,3 +1,6 @@
+### Demo Page
+[here](https://lynda0214.github.io/DailyDrink/)
+
 ### Framework:
 React.js
 
@@ -14,9 +17,6 @@ React.js
 - Reuse OrderFormPage for Creating and Editing orders
 - Validate input fields in OrderFormPage before submission
 - Support RWD for viewing on both desktop and mobile browser
-
-### Demo Page
-[here](https://lynda0214.github.io/DailyDrink/)
 
 ### Scripts
 - Run on localhost
