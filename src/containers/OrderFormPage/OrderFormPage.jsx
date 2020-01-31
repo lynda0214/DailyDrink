@@ -3,25 +3,33 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import * as actionTypes from '../../actions/types';
-import styles from './EditOrderPage.module.css';
+import styles from './OrderFormPage.module.css';
 
-class EditOrderPage extends Component {
+class OrderFormPage extends Component {
 
     id = this.props.match.params.id;
-    oldOrder = this.props.drinks[this.id];
-    oldTitle = this.oldOrder.title;
-    oldPrice = this.oldOrder.price;
-    oldAddition = this.oldOrder.addition;
+    oldOrder = this.id ? this.props.drinks[this.id] : null;
+    oldTitle = this.id ? this.oldOrder.title : null;
+    oldPrice = this.id ? this.oldOrder.price : null;
+    oldAddition = this.id ? this.oldOrder.addition : null;
 
     handelEmptyClick = (event) => {
         /* Both field are non-empty */
         if (this.refs.newTitle.value !== "" && this.refs.newPrice.value > 0) {
-            this.props.onEditOrder(
-                this.id,
-                this.refs.newTitle.value,
-                parseInt(this.refs.newPrice.value),
-                this.refs.newAddition.value,
-            );
+            if (this.id) {
+                this.props.onEditOrder(
+                    this.id,
+                    this.refs.newTitle.value,
+                    parseInt(this.refs.newPrice.value),
+                    this.refs.newAddition.value,
+                );
+            } else {
+                this.props.onCreateOrder(
+                    this.refs.newTitle.value,
+                    parseInt(this.refs.newPrice.value),
+                    this.refs.newAddition.value,
+                );
+            }
         } else {
             event.preventDefault(); // do nothing
             alert('品項與價錢不能是空白');
@@ -30,8 +38,8 @@ class EditOrderPage extends Component {
     }
     render () {
         return (
-            <div className={styles.EditOrderPage}>
-              <div className={styles.EditOrder}>
+            <div className={styles.OrderFormPage}>
+              <div className={styles.OrderForm}>
                 <h3>點飲料</h3>
                 <input
                     type='text'
@@ -69,8 +77,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onEditOrder: (id, title, price, addition) => dispatch({type: actionTypes.EDIT, id: id, title: title, price: price, addition: addition})
+        onEditOrder: (id, title, price, addition) => dispatch({type: actionTypes.EDIT, id: id, title: title, price: price, addition: addition}),
+        onCreateOrder: (title, price, addition) => dispatch({type: actionTypes.CREATE, title: title, price: price, addition: addition})
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(EditOrderPage);
+export default connect(mapStateToProps, mapDispatchToProps)(OrderFormPage);

@@ -1,10 +1,10 @@
-.EditOrderPage {
+.OrderFormPage {
   margin-top: 5rem;
   display: flex;
   justify-content: center;
 }
 
-.EditOrder {
+.OrderForm {
   width: 60%;
   max-width: 300px;
   text-align: center;
@@ -14,25 +14,26 @@
   align-items: center;
 }
 
-.EditOrder h3 {
+.OrderForm h3 {
   color: #2ECC71;
 }
 
-.EditOrder input {
+.OrderForm input {
   width: 80%;
   margin: 0.5rem;
   font-size: 1.2rem;
   border: 1px solid #2ECC71;
 }
 
-.EditOrder textarea {
+.OrderForm textarea {
   width: 80%;
   height: 3rem;
   font-size: 1.2rem;
+  margin: 0.5rem;
   border: 1px solid #2ECC71;
 }
 
-.EditOrder .SubmitBtn {
+.OrderForm .SubmitBtn {
   background-color: #2ECC71;
   color: white;
   margin-bottom: 1rem;

@@ -4,15 +4,14 @@ import './App.css';
 import Toolbar from './Toolbar/Toolbar';
 
 import OrderListPage from './OrderListPage/OrderListPage';
-import CreateOrderPage from './CreateOrderPage/CreateOrderPage';
-import EditOrderPage from './EditOrderPage/EditOrderPage';
+import OrderFormPage from './OrderFormPage/OrderFormPage';
 
 const App = () => (
   <Router>
     <Toolbar />
     <Route path={`${process.env.PUBLIC_URL}/`} exact component={OrderListPage}/>
-    <Route path={`${process.env.PUBLIC_URL}/order`} component={CreateOrderPage}/>
-    <Route path={`${process.env.PUBLIC_URL}/edit/:id`} component={EditOrderPage}/>
+    <Route path={`${process.env.PUBLIC_URL}/order`} component={OrderFormPage}/>
+    <Route path={`${process.env.PUBLIC_URL}/edit/:id`} component={OrderFormPage}/>
   </Router>
 );
 
