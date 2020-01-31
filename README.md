@@ -17,3 +17,18 @@ React.js
 
 ### Demo Page
 [here](https://lynda0214.github.io/DailyDrink/)
+
+### Scripts
+- Run on localhost
+
+```
+npm install
+npm start
+```
+
+- Run on gh-pages
+
+```
+npm run build
+npm run deploy
+```
