@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/DailyDrink/static/css/main.92dc40ba.chunk.css",
-    "main.js": "/DailyDrink/static/js/main.7dcce33c.chunk.js",
-    "main.js.map": "/DailyDrink/static/js/main.7dcce33c.chunk.js.map",
+    "main.css": "/DailyDrink/static/css/main.0fe37c1b.chunk.css",
+    "main.js": "/DailyDrink/static/js/main.7d8cc2f1.chunk.js",
+    "main.js.map": "/DailyDrink/static/js/main.7d8cc2f1.chunk.js.map",
     "runtime-main.js": "/DailyDrink/static/js/runtime-main.fdcb7558.js",
     "runtime-main.js.map": "/DailyDrink/static/js/runtime-main.fdcb7558.js.map",
     "static/js/2.a83d1515.chunk.js": "/DailyDrink/static/js/2.a83d1515.chunk.js",
     "static/js/2.a83d1515.chunk.js.map": "/DailyDrink/static/js/2.a83d1515.chunk.js.map",
     "index.html": "/DailyDrink/index.html",
-    "precache-manifest.34bdf00f65f3eda4c3439a1a09a51659.js": "/DailyDrink/precache-manifest.34bdf00f65f3eda4c3439a1a09a51659.js",
+    "precache-manifest.d8506c2c155f949fc124fcf584277cdd.js": "/DailyDrink/precache-manifest.d8506c2c155f949fc124fcf584277cdd.js",
     "service-worker.js": "/DailyDrink/service-worker.js",
-    "static/css/main.92dc40ba.chunk.css.map": "/DailyDrink/static/css/main.92dc40ba.chunk.css.map",
+    "static/css/main.0fe37c1b.chunk.css.map": "/DailyDrink/static/css/main.0fe37c1b.chunk.css.map",
     "static/js/2.a83d1515.chunk.js.LICENSE": "/DailyDrink/static/js/2.a83d1515.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.fdcb7558.js",
     "static/js/2.a83d1515.chunk.js",
-    "static/css/main.92dc40ba.chunk.css",
-    "static/js/main.7dcce33c.chunk.js"
+    "static/css/main.0fe37c1b.chunk.css",
+    "static/js/main.7d8cc2f1.chunk.js"
   ]
 }
