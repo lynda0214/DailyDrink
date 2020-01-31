@@ -8,7 +8,6 @@ import styles from './OrderList.module.css';
 
 class OrderList extends Component {
     render () {
-        console.log(this.props.drinks);
         return (
             this.props.drinks.length ? <table className={styles.OrderList}>
                 <thead>

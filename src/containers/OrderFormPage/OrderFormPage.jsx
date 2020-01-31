@@ -13,9 +13,16 @@ class OrderFormPage extends Component {
     oldPrice = this.id ? this.oldOrder.price : null;
     oldAddition = this.id ? this.oldOrder.addition : null;
 
-    handelEmptyClick = (event) => {
+    state = {
+        errMsg: {
+            title: "",
+            price: "",
+        }
+    }
+
+    handelSubmit = (event) => {
         /* Both field are non-empty */
-        if (this.refs.newTitle.value !== "" && this.refs.newPrice.value > 0) {
+        if (this.handleValidate('title') && this.handleValidate('price')) {
             if (this.id) {
                 this.props.onEditOrder(
                     this.id,
@@ -31,26 +38,57 @@ class OrderFormPage extends Component {
                 );
             }
         } else {
-            event.preventDefault(); // do nothing
-            alert('品項與價錢不能是空白');
+            event.preventDefault(); // not submit
         }
 
     }
+
+    handleValidate = (type) => {
+        let newErrMsg = {};
+        let valid = false;
+        if (type === 'title') {
+            if (this.refs.newTitle.value === "") {
+                newErrMsg[type] = "↑品項必填";
+            } else {
+                newErrMsg[type] = "";
+                valid = true;
+            }
+
+        } else if (type === 'price') {
+            if (this.refs.newPrice.value === "") {
+                newErrMsg[type] = "↑價格必填";
+            }
+            else if (this.refs.newPrice.value < 0) {
+                newErrMsg[type] = "↑價錢不能是負數";
+            } else {
+                newErrMsg[type] = "";
+                valid = true;
+            }
+        }
+        this.setState({
+            errMsg: newErrMsg
+        });
+        return valid;
+    }
+
+
     render () {
         return (
             <div className={styles.OrderFormPage}>
-              <div className={styles.OrderForm}>
-                <h3>點飲料</h3>
+              <form onSubmit={this.handelSubmit} className={styles.OrderForm}>
+                <h3>{this.id ? "編輯訂單" : "點飲料"}</h3>
                 <input
                     type='text'
                     ref='newTitle'
                     defaultValue={this.oldTitle}
                     placeholder='請輸入飲料品項名稱'/>
+                <span>{this.state.errMsg['title']}</span>
                 <input
                     type='number'
                     ref='newPrice'
                     defaultValue={this.oldPrice}
                     placeholder='請輸入飲料價格'/>
+                <span>{this.state.errMsg['price']}</span>
                 <textarea
                     ref='newAddition'
                     defaultValue={this.oldAddition}
@@ -60,10 +98,10 @@ class OrderFormPage extends Component {
                     <input
                         type='submit'
                         className={styles.SubmitBtn}
-                        onClick={this.handelEmptyClick}
+                        onClick={this.handelSubmit}
                         value='送出'/>
                 </Link>
-              </div>
+              </form>
             </div>
         )
     }
