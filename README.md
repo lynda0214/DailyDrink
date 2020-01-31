@@ -1,4 +1,4 @@
-### Framework: 
+### Framework:
 React.js
 
 ### Packages:
@@ -11,6 +11,8 @@ React.js
 - Create, Edit, and Delete orders of drinks
 - Route to different pages when executing Create & Edit (**BrowserRouter**)
 - Manage state between different routing pages using **redux**
+- Reuse OrderFormPage for Creating and Editing orders
+- Validate input fields in OrderFormPage before submission
 - Support RWD for viewing on both desktop and mobile browser
 
 ### Demo Page
